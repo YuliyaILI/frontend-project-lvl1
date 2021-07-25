@@ -1,6 +1,7 @@
 /* eslint-disable linebreak-style */
 import readlineSync from 'readline-sync';
-import hello from '../cli.js';
+// import hello from '../cli.js';
+import { hello, getRandomInRange } from '../index.js'
 
 const calcGame = () => {
   const name = hello();
@@ -18,11 +19,11 @@ const calcGame = () => {
     }
     return res;
   };
-  const getRandomInRange = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
+  
   const operators = ['+', '-', '*'];
   console.log('What is the result of the expression?');
+  let flag = true;
   for (let i = 0; i < 3; i += 1) {
-    let flag = true;
     const numberOperator = getRandomInRange(0, 2);
     const operator = operators[numberOperator];
     const num1 = getRandomInRange(1, 50);
@@ -36,9 +37,9 @@ const calcGame = () => {
       i = 3;
       flag = false;
     }
-    if (flag === true) {
-      console.log(`Congratulations, ${name}!`);
-    }
+  }
+  if (flag === true) {
+    console.log(`Congratulations, ${name}!`);
   }
 };
 export default calcGame;
