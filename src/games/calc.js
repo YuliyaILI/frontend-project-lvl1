@@ -1,11 +1,10 @@
 /* eslint-disable linebreak-style */
 import readlineSync from 'readline-sync';
 // import hello from '../cli.js';
-import { hello, getRandomInRange } from '../index.js'
+import { hello, getRandomInRange } from '../index.js';
 
 const calcGame = () => {
   const name = hello();
-  // console.log(name);
   const oper = (op, nam1, nam2) => {
     let res;
     if (op === '+') {
@@ -19,7 +18,6 @@ const calcGame = () => {
     }
     return res;
   };
-  
   const operators = ['+', '-', '*'];
   console.log('What is the result of the expression?');
   let flag = true;
