@@ -1,6 +1,5 @@
 /* eslint-disable linebreak-style */
 import readlineSync from 'readline-sync';
-// import hello from '../cli.js';
 import { hello, getRandomInRange } from '../index.js';
 
 const calcGame = () => {
@@ -26,7 +25,7 @@ const calcGame = () => {
     const operator = operators[numberOperator];
     const num1 = getRandomInRange(1, 50);
     const num2 = getRandomInRange(1, 10);
-    const answer = Number(readlineSync.question(`Question: ${num1}${operator}${num2}\nYour answer: `));
+    const answer = Number(readlineSync.question(`Question: ${num1} ${operator} ${num2}\nYour answer: `));
     const result = oper(operator, num1, num2);
     if (answer === result) {
       console.log('Correct!');
