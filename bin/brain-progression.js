@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-/* eslint-disable linebreak-style */
-import progressionGame from '../src/games/progression.js';
+import playProgressionGame from '../src/index.js';
+import { getQuestion, getAnswer, getResult } from '../src/games/progression.js';
 
-progressionGame();
+playProgressionGame(getQuestion, getAnswer, getResult);

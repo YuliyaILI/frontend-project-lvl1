@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-/* eslint-disable linebreak-style */
-import playPrimeGame from '../src/games/prime.js';
+import playPrimeGame from '../src/index.js';
+import { getQuestion, getAnswer, getResult } from '../src/games/prime.js';
 
-playPrimeGame();
+playPrimeGame(getQuestion, getAnswer, getResult);

@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-/* eslint-disable linebreak-style */
-import calcGame from '../src/games/calc.js';
+import playCalcGame from '../src/index.js';
+import { getQuestion, getAnswer, getResult } from '../src/games/calc.js';
 
-calcGame();
+playCalcGame(getQuestion, getAnswer, getResult);

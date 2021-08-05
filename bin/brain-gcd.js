@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-/* eslint-disable linebreak-style */
-import gcdGame from '../src/games/gcd.js';
+import playGcdGame from '../src/index.js';
+import { getQuestion, getAnswer, getResult } from '../src/games/gcd.js';
 
-gcdGame();
+playGcdGame(getQuestion, getAnswer, getResult);

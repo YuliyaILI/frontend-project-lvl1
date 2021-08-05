@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-/* eslint-disable linebreak-style */
-import evenGame from '../src/games/even.js';
+import playEvenGame from '../src/index.js';
+import { getQuestion, getAnswer, getResult } from '../src/games/even.js';
 
-evenGame();
+playEvenGame(getQuestion, getAnswer, getResult);
